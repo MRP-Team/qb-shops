@@ -45,7 +45,7 @@ Config.Products = {
     },
     ["normal"] = {
         [1] = {
-            name = "tosti",
+            name = "water_bottle",
             price = 2,
             amount = 50,
             info = {},
@@ -53,7 +53,7 @@ Config.Products = {
             slot = 1,
         },
         [2] = {
-            name = "water_bottle",
+            name = "kurkakola",
             price = 2,
             amount = 50,
             info = {},
@@ -61,7 +61,7 @@ Config.Products = {
             slot = 2,
         },
         [3] = {
-            name = "kurkakola",
+            name = "twerks_candy",
             price = 2,
             amount = 50,
             info = {},
@@ -69,7 +69,7 @@ Config.Products = {
             slot = 3,
         },
         [4] = {
-            name = "twerks_candy",
+            name = "snikkel_candy",
             price = 2,
             amount = 50,
             info = {},
@@ -77,7 +77,49 @@ Config.Products = {
             slot = 4,
         },
         [5] = {
+            name = "lighter",
+            price = 2,
+            amount = 50,
+            info = {},
+            type = "item",
+            slot = 5,
+        },
+    },
+    ["liquor"] = {
+        [1] = {
+            name = "water_bottle",
+            price = 2,
+            amount = 50,
+            info = {},
+            type = "item",
+            slot = 1,
+        },
+        [2] = {
+            name = "kurkakola",
+            price = 2,
+            amount = 50,
+            info = {},
+            type = "item",
+            slot = 2,
+        },
+        [3] = {
+            name = "twerks_candy",
+            price = 2,
+            amount = 50,
+            info = {},
+            type = "item",
+            slot = 3,
+        },
+        [4] = {
             name = "snikkel_candy",
+            price = 2,
+            amount = 50,
+            info = {},
+            type = "item",
+            slot = 4,
+        },
+        [5] = {
+            name = "lighter",
             price = 2,
             amount = 50,
             info = {},
@@ -85,86 +127,34 @@ Config.Products = {
             slot = 5,
         },
         [6] = {
-            name = "sandwich",
-            price = 2,
-            amount = 50,
-            info = {},
+            name = "redwoodcigs",
+            price = 200,
+            amount = 5000,
+            info = {
+                uses = 20
+            },
             type = "item",
             slot = 6,
         },
         [7] = {
-            name = "beer",
-            price = 7,
-            amount = 50,
-            info = {},
+            name = "cardiaquecigs",
+            price = 200,
+            amount = 5000,
+            info = {
+                uses = 20
+            },
             type = "item",
             slot = 7,
         },
         [8] = {
-            name = "whiskey",
-            price = 10,
-            amount = 50,
-            info = {},
+            name = "yukoncigs",
+            price = 200,
+            amount = 5000,
+            info = {
+                uses = 20
+            },
             type = "item",
             slot = 8,
-        },
-        [9] = {
-            name = "vodka",
-            price = 12,
-            amount = 50,
-            info = {},
-            type = "item",
-            slot = 9,
-        },
-        [10] = {
-            name = "bandage",
-            price = 100,
-            amount = 50,
-            info = {},
-            type = "item",
-            slot = 10,
-        },
-        [11] = {
-            name = "lighter",
-            price = 2,
-            amount = 50,
-            info = {},
-            type = "item",
-            slot = 11,
-        },
-        [12] = {
-            name = "rolling_paper",
-            price = 2,
-            amount = 5000,
-            info = {},
-            type = "item",
-            slot = 12,
-        },
-    },
-    ["liquor"] = {
-        [1] = {
-            name = "beer",
-            price = 7,
-            amount = 50,
-            info = {},
-            type = "item",
-            slot = 1,
-        },
-        [2] = {
-            name = "whiskey",
-            price = 10,
-            amount = 50,
-            info = {},
-            type = "item",
-            slot = 2,
-        },
-        [3] = {
-            name = "vodka",
-            price = 12,
-            amount = 50,
-            info = {},
-            type = "item",
-            slot = 3,
         },
     },
     ["hardware"] = {
@@ -331,36 +321,6 @@ Config.Products = {
             info = {},
             type = "item",
             slot = 5,
-        },
-        [6] = {
-            name = "redwoodcigs",
-            price = 200,
-            amount = 5000,
-            info = {
-                uses = 20
-            },
-            type = "item",
-            slot = 6,
-        },
-        [7] = {
-            name = "cardiaquecigs",
-            price = 200,
-            amount = 5000,
-            info = {
-                uses = 20
-            },
-            type = "item",
-            slot = 7,
-        },
-        [8] = {
-            name = "yukoncigs",
-            price = 200,
-            amount = 5000,
-            info = {
-                uses = 20
-            },
-            type = "item",
-            slot = 8,
         },
     },
     ["gearshop"] = {
