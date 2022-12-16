@@ -1,6 +1,8 @@
 Config = {}
+Config.UseTruckerJob = false -- true = The shops stock is based on when truckers refill it | false = shop inventory never runs out
 Config.UseTarget = GetConvar('UseTarget', 'false') == 'true' -- Use qb-target interactions (don't change this, go to your server.cfg and add `setr UseTarget true` to use this and just that from true to false or the other way around)
 Config.FirearmsLicenseCheck = false -- Whether a arms dealer checks for a firearms license
+Config.ShopsInvJsonFile = './json/shops-inventory.json' -- json file location
 Config.SellCasinoChips = {
     coords = vector4(950.37, 34.72, 71.87, 33.82),
     radius = 1.5,
@@ -285,7 +287,7 @@ Config.Products = {
         [1] = {
             name = "joint",
             price = 10,
-            amount = 1000,
+            amount = 50,
             info = {},
             type = "item",
             slot = 1,
@@ -293,7 +295,7 @@ Config.Products = {
         [2] = {
             name = "weapon_poolcue",
             price = 100,
-            amount = 1000,
+            amount = 50,
             info = {},
             type = "item",
             slot = 2,
@@ -301,7 +303,7 @@ Config.Products = {
         [3] = {
             name = "weed_nutrition",
             price = 20,
-            amount = 1000,
+            amount = 50,
             info = {},
             type = "item",
             slot = 3,
@@ -486,7 +488,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 52,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(26.45, -1315.51, 29.62, 0.07)
     },
 
     ["247supermarket2"] = {
@@ -501,7 +504,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 52,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(-3047.95, 590.71, 7.62, 19.53)
     },
 
     ["247supermarket3"] = {
@@ -516,7 +520,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 52,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(-3245.76, 1005.25, 12.83, 269.45)
     },
 
     ["247supermarket4"] = {
@@ -531,7 +536,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 52,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(1741.76, 6419.61, 35.04, 6.83)
     },
 
     ["247supermarket5"] = {
@@ -546,7 +552,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 52,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(1963.81, 3750.09, 32.26, 302.46)
     },
 
     ["247supermarket6"] = {
@@ -561,7 +568,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 52,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(541.54, 2663.53, 42.17, 120.51)
     },
 
     ["247supermarket7"] = {
@@ -576,7 +584,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 52,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(2662.19, 3264.95, 55.24, 168.55)
     },
 
     ["247supermarket8"] = {
@@ -591,7 +600,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 52,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(2553.24, 399.73, 108.56, 344.86)
     },
 
     ["247supermarket9"] = {
@@ -606,7 +616,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 52,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(379.97, 357.3, 102.56, 26.42)
     },
 
     -- LTD Gasoline Locations
@@ -622,7 +633,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 52,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(-40.51, -1747.45, 29.29, 326.39)
     },
 
     ["ltdgasoline2"] = {
@@ -637,7 +649,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 52,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(-702.89, -917.44, 19.21, 181.96)
     },
 
     ["ltdgasoline3"] = {
@@ -652,7 +665,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 52,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(-1829.29, 801.49, 138.41, 41.39)
     },
 
     ["ltdgasoline4"] = {
@@ -667,7 +681,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 52,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(1160.62, -312.06, 69.28, 3.77)
     },
 
     ["ltdgasoline5"] = {
@@ -682,7 +697,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 52,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(1702.68, 4917.28, 42.22, 139.27)
     },
 
     -- Rob's Liquor Locations
@@ -698,7 +714,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 52,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(-1226.92, -901.82, 12.28, 213.26)
     },
 
     ["robsliquor2"] = {
@@ -713,7 +730,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 52,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(-1468.29, -387.61, 38.79, 220.13)
     },
 
     ["robsliquor3"] = {
@@ -728,7 +746,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 52,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(-2961.49, 376.25, 15.02, 111.41)
     },
 
     ["robsliquor4"] = {
@@ -743,7 +762,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 52,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(1194.52, 2722.21, 38.62, 9.37)
     },
 
     ["robsliquor5"] = {
@@ -758,7 +778,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 52,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(1129.73, -989.27, 45.97, 280.98)
     },
 
     -- Hardware Store Locations
@@ -774,7 +795,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 402,
         ["blipscale"] = 0.8,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(89.15, -1745.29, 30.09, 315.25)
     },
 
     ["hardware2"] = {
@@ -789,7 +811,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 402,
         ["blipscale"] = 0.8,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(2704.68, 3457.21, 55.54, 176.28)
     },
 
     ["hardware3"] = {
@@ -804,7 +827,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 402,
         ["blipscale"] = 0.8,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(-438.25, 6146.9, 31.48, 136.99)
     },
 
     -- Ammunation Locations
@@ -821,7 +845,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 110,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(-660.61, -938.14, 21.83, 167.22)
     },
     ["ammunation2"] = {
         ["label"] = "Ammunation",
@@ -836,7 +861,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 110,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(820.97, -2146.7, 28.71, 359.98)
     },
     ["ammunation3"] = {
         ["label"] = "Ammunation",
@@ -851,7 +877,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 110,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(1687.17, 3755.47, 34.34, 163.69)
     },
     ["ammunation4"] = {
         ["label"] = "Ammunation",
@@ -866,7 +893,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 110,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(-341.72, 6098.49, 31.32, 11.05)
     },
     ["ammunation5"] = {
         ["label"] = "Ammunation",
@@ -881,7 +909,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 110,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(249.0, -50.64, 69.94, 60.71)
     },
     ["ammunation6"] = {
         ["label"] = "Ammunation",
@@ -896,7 +925,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 110,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(-5.82, -1107.48, 29.0, 164.32)
     },
     ["ammunation7"] = {
         ["label"] = "Ammunation",
@@ -911,7 +941,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 110,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(2578.77, 285.53, 108.61, 277.2)
     },
     ["ammunation8"] = {
         ["label"] = "Ammunation",
@@ -926,7 +957,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 110,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(-1127.67, 2708.18, 18.8, 41.76)
     },
     ["ammunation9"] = {
         ["label"] = "Ammunation",
@@ -941,7 +973,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 110,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(847.83, -1020.36, 27.88, 88.29)
     },
     ["ammunation10"] = {
         ["label"] = "Ammunation",
@@ -956,7 +989,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 110,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(-1302.44, -385.23, 36.62, 303.79)
     },
     ["ammunation11"] = {
         ["label"] = "Ammunation",
@@ -971,13 +1005,14 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 110,
         ["blipscale"] = 0.6,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(-3183.6, 1084.35, 20.84, 68.13)
     },
 
     -- Casino Locations
     ["casino"] = {
         ["label"] = "Diamond Casino",
-        ["coords"] = vector4(949.29, 32.13, 71.95, 79.54),
+        ["coords"] = vector4(978.46, 39.07, 74.88, 64.0),
         ["ped"] = 'csb_tomcasino',
         ["scenario"] = "WORLD_HUMAN_STAND_MOBILE",
         ["radius"] = 1.5,
@@ -987,12 +1022,13 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 617,
         ["blipscale"] = 0.8,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(972.6, 9.22, 81.04, 233.38)
     },
 
     ["casinobar"] = {
         ["label"] = "Casino Bar",
-        ["coords"] = vector4(937.45, 27.22, 71.83, 61.21),
+        ["coords"] = vector4(968.13, 29.85, 74.88, 208.86),
         ["ped"] = 'a_m_y_smartcaspat_01',
         ["scenario"] = "WORLD_HUMAN_VALET",
         ["radius"] = 1.5,
@@ -1002,7 +1038,8 @@ Config.Locations = {
         ["showblip"] = false,
         ["blipsprite"] = 52,
         ["blipscale"] = 0.8,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(937.16, 1.0, 78.76, 152.4)
     },
 
     -- Weedshop Locations
@@ -1018,7 +1055,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 140,
         ["blipscale"] = 0.8,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(-1162.13, -1568.57, 4.39, 328.52)
     },
 
     -- Sea Word Locations
@@ -1034,7 +1072,8 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 52,
         ["blipscale"] = 0.8,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(-1674.18, -1073.7, 13.15, 333.56)
     },
 
     -- Leisure Shop Locations
@@ -1050,6 +1089,7 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 52,
         ["blipscale"] = 0.8,
-        ["blipcolor"] = 0
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(-1507.64, 1505.52, 115.29, 262.2)
     },
 }
