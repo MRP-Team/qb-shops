@@ -15,9 +15,8 @@ Config.Products = {
             price = 1500,
             amount = 10,
             info = {},
-            type = 'weapon',
+            type = 'item',
             slot = 1,
-            requiresLicense = true
         },
         [2] = {
             name = 'shotgun_ammo',
@@ -26,7 +25,6 @@ Config.Products = {
             info = {},
             type = 'item',
             slot = 2,
-            requiresLicense = true
         },
         [3] = {
             name = 'huntingbait',
@@ -43,7 +41,25 @@ Config.Products = {
             info = {},
             type = 'item',
             slot = 4
-        }
+        },
+        [5] = {
+            name = "soybeans",
+            price = 5,
+            amount = 1000,
+            info = {},
+            type = "item",
+            slot = 5,
+            requiredJob = { "farmer" }
+        },
+        [6] = {
+            name = "emptybucket",
+            price = 10,
+            amount = 100,
+            info = {},
+            type = "item",
+            slot = 6,
+            requiredJob = { "farmer" }
+        },
     },
     ["normal"] = {
         [1] = {
